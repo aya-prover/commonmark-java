@@ -5,6 +5,8 @@
 
 # Gradle
 gradle.properties
+.gradle
+build/
 
 # IntelliJ IDEA
 .idea
