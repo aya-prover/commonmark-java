@@ -1,7 +1,6 @@
 // Copyright (c) 2020-2021 Yinsen (Tesla) Zhang.
 // Use of this source code is governed by the MIT license that can be found in the LICENSE file.
 import org.apache.tools.ant.taskdefs.condition.Os
-import java.util.*
 
 plugins {
   java
@@ -15,7 +14,7 @@ allprojects {
   version = "0.18.1"
 }
 
-@kotlin.Suppress("unsupported")
+@Suppress("unsupported")
 subprojects {
   apply {
     plugin("java")
@@ -34,6 +33,10 @@ subprojects {
     }
   }
 
+  sourceSets.test.configure {
+    java { this.srcDirs.clear() }
+  }
+
   tasks.withType<JavaCompile>().configureEach {
     modularity.inferModulePath.set(true)
 
@@ -49,7 +52,7 @@ subprojects {
     val options = options as StandardJavadocDocletOptions
     options.modulePath = tasks.compileJava.get().classpath.toList()
     options.addBooleanOption("-enable-preview", true)
-    options.addStringOption("-source", "11")
+    options.addStringOption("source", "11")
     options.addStringOption("Xdoclint:none", "-quiet")
     options.encoding("UTF-8")
     options.tags(
