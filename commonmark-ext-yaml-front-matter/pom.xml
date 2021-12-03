@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>commonmark-parent</artifactId>
-        <groupId>org.commonmark</groupId>
-        <version>0.18.1</version>
+        <groupId>org.aya-prover</groupId>
+        <version>0.18.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>commonmark-ext-yaml-front-matter</artifactId>
@@ -13,12 +13,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.commonmark</groupId>
+            <groupId>org.aya-prover</groupId>
             <artifactId>commonmark</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.commonmark</groupId>
+            <groupId>org.aya-prover</groupId>
             <artifactId>commonmark-test-util</artifactId>
             <scope>test</scope>
         </dependency>

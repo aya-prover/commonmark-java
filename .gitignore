@@ -3,6 +3,9 @@
 .classpath
 .settings/
 
+# Gradle
+gradle.properties
+
 # IntelliJ IDEA
 .idea
 *.iml

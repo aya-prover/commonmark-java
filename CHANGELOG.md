@@ -47,7 +47,7 @@ with the exception that 0.x versions can break between minor versions.
 - **ACTION REQUIRED**: Maven groupId has changed from `com.atlassian.commonmark` to `org.commonmark`
   - To continue getting new versions of commonmark-java, change the Maven coordinates in your dependencies:
   - Old: `<groupId>com.atlassian.commonmark</groupId>`
-  - New: `<groupId>org.commonmark</groupId>`
+  - New: `<groupId>org.aya-prover</groupId>`
 
 ## [0.16.1] - 2020-12-11
 ### Added
