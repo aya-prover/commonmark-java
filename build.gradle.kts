@@ -11,7 +11,7 @@ plugins {
 
 allprojects {
   group = "org.aya-prover"
-  version = "0.18.1"
+  version = "0.19.0"
 }
 
 @Suppress("unsupported")
