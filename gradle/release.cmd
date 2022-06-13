@@ -1,3 +1,4 @@
+call gradlew.bat :commonmark:publish
 call gradlew.bat :commonmark-ext-autolink:publish
 call gradlew.bat :commonmark-ext-gfm-strikethrough:publish
 call gradlew.bat :commonmark-ext-gfm-tables:publish

@@ -11,7 +11,7 @@ plugins {
 
 allprojects {
   group = "org.aya-prover"
-  version = "0.19.0"
+  version = "0.19.1"
 }
 
 @Suppress("unsupported")
@@ -44,14 +44,13 @@ subprojects {
       encoding = "UTF-8"
       isDeprecation = true
       release.set(11)
-      compilerArgs.addAll(listOf("-Xlint:unchecked", "--enable-preview"))
+      compilerArgs.addAll(listOf("-Xlint:unchecked"))
     }
   }
 
   tasks.withType<Javadoc>().configureEach {
     val options = options as StandardJavadocDocletOptions
     options.modulePath = tasks.compileJava.get().classpath.toList()
-    options.addBooleanOption("-enable-preview", true)
     options.addStringOption("source", "11")
     options.addStringOption("Xdoclint:none", "-quiet")
     options.encoding("UTF-8")
@@ -67,14 +66,12 @@ subprojects {
     add("archives", tasks["javadocJar"])
   }
   tasks.withType<Test>().configureEach {
-    jvmArgs = listOf("--enable-preview")
     useJUnitPlatform()
     enableAssertions = true
     reports.junitXml.mergeReruns.set(true)
   }
 
   tasks.withType<JavaExec>().configureEach {
-    jvmArgs = listOf("--enable-preview")
     enableAssertions = true
   }
 
