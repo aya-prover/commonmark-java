@@ -1,4 +1,4 @@
-# commonmark-java
+# commonmark-java with JPMS
 
 [![Maven Central](https://img.shields.io/maven-central/v/org.aya-prover/commonmark)][maven]
 
@@ -14,6 +14,6 @@ so I'm creating this new fork and publishing it to maven central.
 <dependency>
     <groupId>org.aya-prover</groupId>
     <artifactId>commonmark</artifactId>
-    <version>0.19.0</version>
+    <version>0.19.1</version>
 </dependency>
 ```
