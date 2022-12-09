@@ -11,7 +11,7 @@ plugins {
 
 allprojects {
   group = "org.aya-prover"
-  version = "0.19.1"
+  version = "0.21.1"
 }
 
 @Suppress("unsupported")
@@ -108,6 +108,11 @@ subprojects {
             id.set("rstocker")
             name.set("Robin Stocker")
             email.set("rstocker@atlassian.com")
+          }
+          developer {
+            id.set("ice1000")
+            name.set("Tesla Zhang")
+            email.set("ice1000kotlin@foxmail.com")
           }
         }
         scm {
