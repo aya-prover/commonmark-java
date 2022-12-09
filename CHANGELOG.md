@@ -6,6 +6,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html),
 with the exception that 0.x versions can break between minor versions.
 
+## [0.21.0] - 2022-11-17
+### Added
+- GitHub strikethrough: With the previous version we adjusted the
+  extension to also accept the single tilde syntax. But if you use
+  another extension that uses the single tilde syntax, you will get a
+  conflict. To avoid that, `StrikethroughExtension` can now be
+  configured to require two tildes like before, see Javadoc.
+
+## [0.20.0] - 2022-10-20
+### Fixed
+- GitHub tables: A single pipe (optional whitespace) now ends a table
+  instead of crashing or being treated as an empty row, for consistency
+  with GitHub (#255).
+- GitHub strikethrough: A single tilde now also works, and more than two
+  tildes are not accepted anymore. This brings us in line with what
+  GitHub actually does, which is a bit underspecified (#267)
+- The autolink extension now handles source spans correctly (#209)
+
 ## [0.19.0] - 2022-06-02
 ### Added
 - YAML front matter extension: Limited support for single and double
@@ -361,7 +379,8 @@ API breaking changes (caused by changes in spec):
 Initial release of commonmark-java, a port of commonmark.js with extensions
 for autolinking URLs, GitHub flavored strikethrough and tables.
 
-
+[0.21.0]: https://github.com/commonmark/commonmark-java/compare/commonmark-parent-0.20.0...commonmark-parent-0.21.0
+[0.20.0]: https://github.com/commonmark/commonmark-java/compare/commonmark-parent-0.19.0...commonmark-parent-0.20.0
 [0.19.0]: https://github.com/commonmark/commonmark-java/compare/commonmark-parent-0.18.2...commonmark-parent-0.19.0
 [0.18.2]: https://github.com/commonmark/commonmark-java/compare/commonmark-parent-0.18.1...commonmark-parent-0.18.2
 [0.18.1]: https://github.com/commonmark/commonmark-java/compare/commonmark-parent-0.18.0...commonmark-parent-0.18.1

@@ -14,6 +14,9 @@ so I'm creating this new fork and publishing it to maven central.
 <dependency>
     <groupId>org.aya-prover</groupId>
     <artifactId>commonmark</artifactId>
-    <version>0.19.1</version>
+    <version>0.21.1</version>
 </dependency>
 ```
+
+The module names to use in Java 9 are `org.commonmark`,
+`org.commonmark.ext.autolink`, etc, corresponding to package names.
